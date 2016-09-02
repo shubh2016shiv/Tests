@@ -1,0 +1,39 @@
+package com.Test.ejb;
+
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+import model.Employee;
+
+/**
+ * Session Bean implementation class Hello
+ */
+@Stateless
+public class Hello implements HelloRemote, HelloLocal {
+@PersistenceContext(unitName = "TestJPA")
+EntityManager em;
+	
+    /**
+     * Default constructor. 
+     */
+    public Hello() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public String sayHello() {
+		return "Hello World!!!";
+	}
+
+	@Override
+	public List<Employee> getEmployeeName() {
+		TypedQuery query = em.createQuery("Select e from Employee as e",Employee.class);
+		List<Employee> name = query.getResultList();
+		return name;
+	}
+}

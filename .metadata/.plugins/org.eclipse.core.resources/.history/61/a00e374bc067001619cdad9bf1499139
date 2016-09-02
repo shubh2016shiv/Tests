@@ -1,0 +1,20 @@
+package generic_class;
+
+public class Box<T> {
+private T t;
+
+Box(T t){
+	this.t = t;
+}
+
+public T getT() {
+	return t;
+}
+
+public void setT(T t) {
+	this.t = t;
+}
+
+	
+	
+}

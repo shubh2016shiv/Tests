@@ -1,0 +1,16 @@
+package comp;
+
+public class Laptop {
+
+	private static int ram;
+	private static String brand;
+	
+	Laptop(int ram,String brand){
+		this.ram = ram;
+		this.brand = brand;
+	}
+	
+	
+	
+	
+}

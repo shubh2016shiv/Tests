@@ -1,0 +1,26 @@
+package com.bubblesort.test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	List<Integer> num = new ArrayList<>();
+	Scanner scan = new Scanner(System.in);
+	char choice = 0;
+	do{
+		System.out.println("Enter the number: ");
+		num.add(scan.nextInt());
+		System.out.println("Do you want to enter more numbers? y/n : ");
+		choice = scan.next().charAt(0);
+	}while(choice=='y');
+
+	scan.close();
+	
+	System.out.println(num);
+	
+	}
+
+}

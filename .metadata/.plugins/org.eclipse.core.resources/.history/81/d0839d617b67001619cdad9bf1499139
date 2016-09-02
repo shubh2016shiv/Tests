@@ -1,0 +1,19 @@
+package comp;
+
+import java.util.Comparator;
+
+public class Comp implements Comparator<Laptop>{
+
+
+	
+	@Override
+	public int compare(Laptop arg0, Laptop arg1) {
+		if(arg0.getRam() > arg1.getRam())
+			return 1;
+		if(arg0.getRam() < arg1.getRam())
+			return -1;
+		else 
+			return 0;
+	}
+
+}

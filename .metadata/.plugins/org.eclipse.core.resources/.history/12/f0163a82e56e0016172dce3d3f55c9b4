@@ -1,0 +1,18 @@
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.ws.rs.Path;
+
+import com.Test.ejb.HelloLocal;
+
+@Path("/employees")
+public class TestResource {
+
+	Context context = new InitialContext();
+	
+	HelloLocal bean;
+	
+@GET
+@Produces("text/plain")
+
+	
+}

@@ -1,0 +1,8 @@
+package com.Test.ejb;
+
+import javax.ejb.Local;
+
+@Local
+public interface HelloLocal {
+
+}

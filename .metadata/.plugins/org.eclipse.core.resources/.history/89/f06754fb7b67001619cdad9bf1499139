@@ -1,0 +1,32 @@
+package comp;
+
+public class Laptop {
+
+	private static int ram;
+	private static String brand;
+	
+	Laptop(String brand,int ram){
+		this.ram = ram;
+		this.brand = brand;
+	}
+
+	public static int getRam() {
+		return ram;
+	}
+
+	public static void setRam(int ram) {
+		Laptop.ram = ram;
+	}
+
+	public static String getBrand() {
+		return brand;
+	}
+
+	public static void setBrand(String brand) {
+		Laptop.brand = brand;
+	}
+	
+	
+	
+	
+}

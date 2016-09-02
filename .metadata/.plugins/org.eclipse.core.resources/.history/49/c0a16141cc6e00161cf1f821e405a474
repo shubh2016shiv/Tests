@@ -1,0 +1,28 @@
+
+public class Main {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Create Properties for JNDI InitialContext.
+		
+		
+		try{
+			
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+		Properties prop = new Properties();
+		prop.put(Context.INITIAL_CONTEXT_FACTORY, org.jboss.naming.remote.client.InitialContextFactory.class.getName()); 
+		prop.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+		prop.put(Context.PROVIDER_URL, "http-remoting://localhost:8080");
+		prop.put("jboss.naming.client.ejb.context", true);
+		
+		
+		Context context = new InitialContext(prop);
+	}
+
+	
+	public Main() {
+		super();
+	}
+
+}
